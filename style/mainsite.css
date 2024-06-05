@@ -7,5 +7,29 @@ a.navbar-brand {
 }
 
 .navbar-brand {
-    font-size: 1.9rem;
+    font-size: 3rem;
 }
+
+.nav-item {
+    font-size: 1.5rem;
+}
+
+.middle-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.display-5 {
+    font-size: 3rem !important;
+}
+
+#bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+  }
