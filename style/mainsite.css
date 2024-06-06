@@ -33,3 +33,35 @@ a.navbar-brand {
     min-height: 100%;
     z-index: -1;
   }
+
+.card-img {
+    width: 100%;  /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    object-fit:fill; /* This will ensure that your images cover the whole area without distortion */
+}
+
+.row {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* For Chrome and Safari */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666; 
+    border-radius: 10px; 
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: #666 #333; 
+}
