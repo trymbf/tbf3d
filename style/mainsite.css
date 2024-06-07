@@ -44,6 +44,11 @@ a.navbar-brand {
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.col {
+    margin-bottom: 1rem;
 }
 
 /* For Chrome and Safari */
@@ -64,4 +69,18 @@ a.navbar-brand {
 * {
     scrollbar-width: thin; 
     scrollbar-color: #666 #333; 
+}
+
+.display-5 {
+    color:gray;
+}
+
+#ggbGameDevText, #programmerText {
+    color:gray;
+}
+
+#tinkererText:hover, #programmerText:hover, #ggbGameDevText:hover {
+    color: #04bb41;
+    cursor: pointer;
+    text-decoration: none;
 }
