@@ -1,5 +1,1 @@
-Hey :)
-
-- Student at Elvebakken VGS
-- Living in Norway
-- Contact: trym.mcduck@gmail.com
+Website for sharing my projects + other small stuff.
