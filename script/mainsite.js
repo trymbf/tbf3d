@@ -1,56 +1,30 @@
-document.getElementById('programmerText').addEventListener('mouseover', function() {
-    var video = document.getElementById('bgvideo');
-    video.src = "../assets/video/anydino.webm";
-    video.style.display = 'block';
-});
+let video1 = document.getElementById("video1");
+let video2 = document.getElementById("video2");
+let video3 = document.getElementById("video3");
 
-// Do the same for 'ggbGameDevText' and 'tinkererText'
+let videosDiv = document.getElementById("bgvideosDiv")
 
-document.getElementById('programmerText').addEventListener('mouseout', function() {
-    var video = document.getElementById('bgvideo');
-    video.pause();
-    video.classList.add('fade-out');
+function switchToVid(vidElement) {
+    let videos = videosDiv.children
+    for (let i = 0; i < videos.length; i++) {
+        videos[i].style.display = "none";
+    }
+    console.log("Switching to video:", vidElement.id); 
+    vidElement.style.display = "block";
+}
 
-    setTimeout(function() {
-        video.style.display = 'none';
-        video.classList.remove('fade-out');
-    }, 500); // match this with the transition duration in your CSS
-});
+let programmerText = document.getElementById("programmerText")
+let thinkererText = document.getElementById("tinkererText")
+let ggbGameDevText = document.getElementById("ggbGameDevText")
 
+ggbGameDevText.addEventListener("mouseover", function (){
+    switchToVid(video2);
+})
 
-document.getElementById('ggbGameDevText').addEventListener('mouseover', function() {
-    var video = document.getElementById('bgvideo');
-    video.src = "../assets/video/ggbdash.mp4";
-    video.play();
-    video.style.display = 'block';
-});
+thinkererText.addEventListener("mouseover", function (){
+    switchToVid(video1);
+})
 
-document.getElementById('ggbGameDevText').addEventListener('mouseout', function() {
-    var video = document.getElementById('bgvideo');
-    video.pause();
-    video.classList.add('fade-out');
-
-    setTimeout(function() {
-        video.style.display = 'none';
-        video.classList.remove('fade-out');
-    }, 500); // match this with the transition duration in your CSS
-
-});
-
-document.getElementById('tinkererText').addEventListener('mouseover', function() {
-    var video = document.getElementById('bgvideo');
-    video.src = "../assets/video/MCPLaunch1Clip.mp4";
-    video.play();
-    video.style.display = 'block';
-});
-
-document.getElementById('tinkererText').addEventListener('mouseout', function() {
-    var video = document.getElementById('bgvideo');
-    video.pause();
-    video.classList.add('fade-out');
-
-    setTimeout(function() {
-        video.style.display = 'none';
-        video.classList.remove('fade-out');
-    }, 500); // match this with the transition duration in your CSS
-});
+programmerText.addEventListener("mouseover", function (){
+    switchToVid(video3);
+})

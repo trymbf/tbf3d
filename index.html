@@ -37,18 +37,28 @@
         </div>
     </nav>
 
-    <div class="container text-center middle-align">
-        <h2 class="display-5">
-            <a href="/projects/" id="programmerText">Programmer</a>,
-            <span id="tinkererText">Tinkerer</span>,
-            <a href="https://www.geogebra.org/m/bcxs7jyp" target="_blank" id="ggbGameDevText">Geogebra Game Developer</a>
-        </h2>
-        <video autoplay muted loop id="bgvideo" style="display: none;">
-            <source src="../assets/video/MCPLaunch1Clip.mp4" type="video/mp4">
-        </video>
+    <div id = "bigtextDiv">
+        <div id = "bgvideosDiv">
+            <video autoplay muted loop class="bgvideo" id = "video1">
+                <source src="../assets/video/MCPLaunch1Clip.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop class="bgvideo" id = "video2">
+                <source src="../assets/video/ggbdash.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop class="bgvideo" id = "video3"></video>
+                <source src="../assets/video/bb.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container text-center middle-align" id = "bigText">
+            <h2 class="display-5">
+                <a href="/projects/" id="programmerText">Programmer</a>,
+                <span id="tinkererText">Tinkerer</span>,
+                <a href="https://www.geogebra.org/m/bcxs7jyp" target="_blank" id="ggbGameDevText">Geogebra Game Developer</a>
+            </h2>
+        </div>
     </div>
 
-    <!-- <script src="script/mainsite.js"></script> -->
+    <script src="script/mainsite.js"></script>
 </body>
 
 <!-- Add Bootstrap JS and its dependencies -->

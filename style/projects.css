@@ -1,0 +1,16 @@
+.card-img {
+    width: 100%;  /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    object-fit:fill; /* This will ensure that your images cover the whole area without distortion */
+}
+
+.row {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.col {
+    margin-bottom: 1rem;
+}

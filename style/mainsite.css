@@ -2,6 +2,7 @@ body.bg-dark {
     background-color: #333333 !important;
 }
 
+/* Navbar */
 a.navbar-brand {
     color: #04bb41 !important;
 }
@@ -14,6 +15,7 @@ a.navbar-brand {
     font-size: 1.5rem;
 }
 
+/* Describer words text */
 .middle-align {
     display: flex;
     justify-content: center;
@@ -21,36 +23,69 @@ a.navbar-brand {
     height: 50vh;
 }
 
+#ggbGameDevText, #programmerText {
+    color:gray;
+}
+
+#tinkererText:hover, #programmerText:hover, #ggbGameDevText:hover {
+    color: #04bb41;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .display-5 {
     font-size: 3rem !important;
+    color:gray;
+    z-index: 1;
 }
 
-#bgvideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: -1;
-  }
-
-.card-img {
-    width: 100%;  /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
-    object-fit:fill; /* This will ensure that your images cover the whole area without distortion */
+#bigtextDiv {
+    position: relative;
 }
 
-.row {
-    margin-top: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+#bigText {
+    position: absolute;
+    top: 0px;
 }
 
-.col {
-    margin-bottom: 1rem;
+/* BG videos */
+#bgvideosDiv {
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    top: 0px;
+}
+.bgvideo {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    opacity: 10%;
 }
 
+#video2 {
+    display: none;
+}
+#video3 {
+    display: none;
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transition: opacity 1s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+/* Make scrollbar thin on the side */
 /* For Chrome and Safari */
 ::-webkit-scrollbar {
     width: 10px; /* Adjust as needed */
@@ -64,33 +99,8 @@ a.navbar-brand {
     background: #666; 
     border-radius: 10px; 
 }
-
 /* For Firefox */
 * {
     scrollbar-width: thin; 
     scrollbar-color: #666 #333; 
-}
-
-.display-5 {
-    color:gray;
-}
-
-#ggbGameDevText, #programmerText {
-    color:gray;
-}
-
-#tinkererText:hover, #programmerText:hover, #ggbGameDevText:hover {
-    color: #04bb41;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.fade-in {
-    opacity: 1 !important;
-    transition: opacity 1s ease-in;
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity .5s ease-out;
 }
