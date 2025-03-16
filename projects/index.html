@@ -1,151 +1,154 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>TBF3D: Projects</title>
-    <meta name="description" content="Here you can download and play TBF3Ds games and projects.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="../style/mainsite.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="./output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
-</head>
+    <title>TrymBF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<body class="bg-dark">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">
-            <img src="../assets/favicon.ico" alt="Logo" style="height:55px; width:55px;">
-            TBF3D
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/projects">Projects <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <style>
+      /* Custom CSS to subtract the navbar height */
+      .card {
+        min-height: calc(70vh);
+        width: calc(100vw - 7rem);
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          width: 100vw;
+        }
+      }
+      
+      .video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-900 text-white flex flex-col">
+    <nav class="flex h-16 justify-between md:p-5">
+      <div class="none md:block"></div>
+      <h3 class="p-4 text-2xl md:static fixed md:text-3xl bg-gray-900 w-full md:bg-transparent font-bold md:font-normal" id="pathTitle">
+        <a href="/#" class="hover:underline">tbf3d.com</a>/<a href="/projects" class="text-green-300 hover:underline">projects</a>
+      </h3>
+      <div class="flex justify-between md:space-x-4 flex-row md:flex-row my-[3.5rem] w-full px-3.5 md:m-0 md:w-auto">
+        <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a href="/projects">projects</a></h3>
+        <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a href="/experience">experience</a></h3>
+        <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a href="/contact">contact</a></h3>
+      </div>
     </nav>
-    
-    <div class="row">
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\bb.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Balancing Bros</h5>
-                  <p class="card-text">My own LAN multiplayer game to play with friends.</p>
-                  <a href="https://drive.google.com/file/d/1J-9fg3ueviFDm_iL7CA6KuECxpBzvy9t/view" download target="_blank" class="btn btn-block btn-info ">Download <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+
+    <div>
+      <div id="duoaddons" class="card bg-gray-700 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+        <img src="../assets/imgs/duoaddons.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
+        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+          <h1 class="text-4xl md:text-6xl font-thin">DUOADDONS</h1>
+          <h4 class="">Create custom Duolingo leagues to compete with friends.</h4>
         </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\duoaddons.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Duoaddons(Beta 1.0)</h5>
-                  <p class="card-text">Create custom Duolingo leagues to compete with friends.</p>
-                  <a href="..\games\DuoAddonsBeta1.0.apk" download class="btn btn-success btn-block">Download (.apk)</a>
-                </div>
-            </div>
+        <div></div>
+        <p class="col-span-1 md:col-span-2">Duoaddons is an app that makes the Duolingo experience a whole lot more social. Create leagues, compete and stalk your friends.</p>
+        <div class="col-span-1 md:col-span-2"></div>
+        <a href="" class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.apk)</a>
+      </div>
+
+      <div id="balancing_bros" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+        <video autoplay muted loop class="video-bg">
+          <source src="../assets/video/bb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="../assets/imgs/bb.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
+        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+          <h1 class="text-4xl md:text-6xl font-thin">BALANCING BROS</h1>
+          <h4 class="">My own LAN multiplayer game to play with friends.</h4>
         </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\geogebradash.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Geogebra Dash</h5>
-                  <p class="card-text">An entire game made and ran in Geogebra.</p>
-                  <a href="https://www.geogebra.org/m/bcxs7jyp" download target="_blank" class="btn btn-block btn-info ">Play on Geogebra.org <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+        <div></div>
+        <p class="col-span-1 md:col-span-2">Balancing Bros is a LAN multiplayer game entirely written in Python. It uses pyMunk for Physics, PyGame for visuals and PyGameUI for the UI.
+          You play as a ball trying to balance on a rotating platform. The last ball standing wins. The controls are really simple: roll right, roll left and jump. These easy controls makes
+          it easy to pick up and produces lots of fun!</p>
+        <div class="col-span-1 md:col-span-2"></div>
+        <a href="https://drive.google.com/file/d/1J-9fg3ueviFDm_iL7CA6KuECxpBzvy9t/view" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.exe) <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div id="ggb_dash" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+        <video autoplay muted loop class="video-bg">
+          <source src="../assets/video/ggbdash.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="../assets/imgs/geogebradash.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
+        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+          <h1 class="text-4xl md:text-6xl font-thin">GEOGEBRA DASH</h1>
+          <h4 class="">Geogebra has a supricing amount of functionality.</h4>
         </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\pygameui.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">PyGameUI</h5>
-                  <p class="card-text">Library to easily create UI in pygame.</p>
-                  <a href="https://trymbf.github.io/pygameui/" download target="_blank" class="btn btn-block btn-info ">Documentation and links <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+        <div></div>
+        <p class="col-span-1 md:col-span-2">For some reason Geogebra has a programming language built in, Geogebra script. When I realised this I saw an opertuninty. 
+          It does not support keyboard inputs, but if you force focus on a slicer, right and left arrow becomes functional. 
+          Geogebra script also translates to the selected language which makes development a huge pain, as Geogebra App uses British English while the web version uses American.
+          Still the game is quite fun, functional and addicting. </p>
+        <div class="col-span-1 md:col-span-2"></div>
+        <a href="https://www.geogebra.org/m/bcxs7jyp" target="_blank" class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Play GGB Dash! <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div id="pygameui" class="card bg-gray-700 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+        <video autoplay muted loop class="video-bg">
+          <source src="../assets/video/" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="../assets/imgs/pygameui.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
+        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+          <h1 class="text-4xl md:text-6xl font-thin">PYGAMEUI</h1>
+          <h4 class="">Create full PyGame GUIs in minuts.</h4>
         </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\PDCQ.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Police Code Quiz</h5>
-                  <p class="card-text">Quiz style program to learn police codes.</p>
-                  <a href="..\games\PDCQSetup.exe" download class="btn btn-success btn-block">Download</a>
-                </div>
-            </div>
+        <div></div>
+        <p class="col-span-1 md:col-span-2">PygameUI is a small Python library written in Python that makes it easier to create UI elements like buttons, texts, inputs,
+           and more when using the Python library PyGame. The library also supplies the user with many optional features for customizing the UI elements.
+           If you are looking for a library that makes small projects and games a lot less of a headache, I would definitely recommend you give PyGameUI a try! </p>
+        <div class="col-span-1 md:col-span-2"></div>
+        <a href="https://trymbf.github.io/pygameui/" target="_blank" class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Documentation and links <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div id="eszett" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+        <video autoplay muted loop class="video-bg">
+          <source src="../assets/video/eszett.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="../assets/imgs/eszett.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
+        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+          <h1 class="text-4xl md:text-6xl font-thin">ESZETT HOTKEY</h1>
+          <h4 class="">I have no idea why this didn't already exist.</h4>
         </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\eszett.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Eszett Hotkey</h5>
-                  <p class="card-text">Creates a hotkey for the german ß (eszett) letter.</p>
-                  <a href="..\games\EszettHotkeySetupv5.exe" download class="btn btn-success btn-block">Download</a>
-                </div>
-            </div>
+        <div></div>
+        <p class="col-span-1 md:col-span-2">Many people need the utulize the German eszett (ß) letter, but without a numpad, there is no way to write it using the keyboard. 
+          Eszett hotkey is build in flutter, providing a modern, easy to use UI. You can set your own key combination, start and stop the hotkey listner and run on startup.</p>
+        <div class="col-span-1 md:col-span-2"></div>
+        <a href="../games/EszettHotkeySetupv5.exe" download class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.exe)</a>
+      </div>
+
+      <div id="anydino" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+        <video autoplay muted loop class="video-bg">
+          <source src="../assets/video/anydino.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="../assets/imgs/anydino.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
+        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+          <h1 class="text-4xl md:text-6xl font-thin">ANYDINO.GAME</h1>
+          <h4 class="">This one is just for fun tbh.</h4>
         </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\anydino.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">AnyDino.game</h5>
-                  <p class="card-text">Play chrome dino game with any png of your choice.</p>
-                  <a href="..\games\AnyDino.Setup.exe" download class="btn btn-success btn-block">Download</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\pong+.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Pong+</h5>
-                  <p class="card-text">Pongv2, actuall fun and skillbased pong.</p>
-                  <a href="..\games\pong+" class="btn btn-info btn-block" target="_blank">Play in browser (PC) <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\pong.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Pong</h5>
-                  <p class="card-text">My second game, with a self playing Pong bot.</p>
-                  <a href="..\games\PongSetup.exe" download class="btn btn-success btn-block">Download</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2 col dynamic-col">
-            <div class="card bg-dark text-white" style="width: 100%;">
-                <img src="..\assets\imgs\tictactoe.png" class="card-img-top card-img" alt="Game Image">
-                <div class="card-body">
-                  <h5 class="card-title">Tic Tac Toe</h5>
-                  <p class="card-text">My very first selfmade game. (Python, pygame)</p>
-                  <a href="..\games\TicTacToeSetup.exe" download class="btn btn-success btn-block">Download</a>
-                </div>
-            </div>
-        </div>
+        <div></div>
+        <p class="col-span-1 md:col-span-2">Wanne play chome dino game with any image?</p>
+        <div class="col-span-1 md:col-span-2"></div>
+        <a href="../games/AnyDino.Setup.exe" download class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.exe)</a>
+      </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../script/projects.js"></script>
-</body>
-
-<!-- Bootstrap JS and its dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  </body>
 </html>
