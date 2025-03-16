@@ -1,0 +1,10 @@
+{
+  "name": "tbf3d",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx tailwindcss build styles.css -o output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}
